@@ -1,0 +1,24 @@
+.share-bar {
+  display: flex;
+  align-items: center;
+  gap: $spacing-3;
+  padding: $spacing-3 $spacing-4;
+  background: $color-bg-secondary;
+  border: 1px solid $color-border-light;
+  border-radius: $radius-full;
+  width: fit-content;
+
+  &__label {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    color: $color-text-muted;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0 $spacing-2 0 $spacing-1;
+  }
+
+  &__actions {
+    display: flex;
+    gap: $spacing-1;
+  }
+}

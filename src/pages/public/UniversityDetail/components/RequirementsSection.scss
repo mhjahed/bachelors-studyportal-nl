@@ -1,0 +1,90 @@
+.requirements-section {
+  &__heading {
+    margin-bottom: $spacing-5;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-4;
+    margin-bottom: $spacing-6;
+
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__additional {
+    padding: $spacing-5;
+    background: $color-bg-secondary;
+    border-radius: $radius-md;
+    border: 1px solid $color-border-light;
+  }
+
+  &__additional-title {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    color: $color-primary;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 $spacing-3;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-2;
+
+    @include sm {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: $spacing-2;
+      font-size: $font-size-sm;
+      color: $color-text-primary;
+
+      i {
+        color: $color-primary;
+        font-size: 1rem;
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+.requirement-block {
+  position: relative;
+  padding: $spacing-6;
+  background: $color-white;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+
+  &__icon-mark {
+    width: 40px;
+    height: 4px;
+    background: $color-primary;
+    border-radius: $radius-full;
+    margin-bottom: $spacing-4;
+
+    &--accent {
+      background: $color-accent;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-md;
+    font-weight: $font-weight-bold;
+    color: $color-text-primary;
+    margin: 0 0 $spacing-3;
+  }
+
+  &__text {
+    font-size: $font-size-sm;
+    line-height: $line-height-relaxed;
+    color: $color-text-secondary;
+    margin: 0;
+  }
+}

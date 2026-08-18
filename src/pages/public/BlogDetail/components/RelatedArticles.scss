@@ -1,0 +1,26 @@
+.related-articles {
+  padding: $spacing-16 0;
+  background: $color-bg-secondary;
+
+  &__heading {
+    margin: 0 auto $spacing-8;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-5;
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $spacing-5;
+
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0 $spacing-6;
+    }
+
+    @include lg {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

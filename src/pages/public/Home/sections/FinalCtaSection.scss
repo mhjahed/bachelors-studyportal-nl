@@ -1,0 +1,81 @@
+.final-cta {
+  padding: $spacing-16 0 $spacing-24;
+  background: $color-white;
+
+  &__box {
+    position: relative;
+    padding: $spacing-12 $spacing-6;
+    background: linear-gradient(135deg, $color-primary-dark 0%, $color-primary 60%, $color-primary-light 100%);
+    border-radius: $radius-2xl;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-8;
+    text-align: center;
+
+    @include md {
+      padding: $spacing-16 $spacing-12;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+      gap: $spacing-12;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba($color-accent, 0.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+  }
+
+  &__title {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    color: $color-white;
+    margin: 0 0 $spacing-3;
+    line-height: $line-height-tight;
+    letter-spacing: -0.02em;
+
+    @include md {
+      font-size: $font-size-3xl;
+    }
+  }
+
+  &__subtitle {
+    font-size: $font-size-md;
+    color: rgba($color-white, 0.85);
+    line-height: $line-height-relaxed;
+    margin: 0;
+    max-width: 560px;
+
+    @include md {
+      max-width: none;
+    }
+  }
+
+  &__actions {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: $spacing-3;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include md {
+      justify-content: flex-end;
+      flex-shrink: 0;
+    }
+  }
+}

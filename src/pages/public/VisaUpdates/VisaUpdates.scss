@@ -1,0 +1,47 @@
+.visa-updates-page {
+  background: $color-bg-secondary;
+  min-height: 100vh;
+
+  &__body {
+    padding: $spacing-10 0 $spacing-16;
+
+    @include md {
+      padding: $spacing-12 0 $spacing-24;
+    }
+  }
+
+  &__featured-section {
+    margin-bottom: $spacing-12;
+
+    @include md {
+      margin-bottom: $spacing-16;
+    }
+  }
+
+  &__list-section {
+    padding-top: $spacing-6;
+    border-top: 1px solid $color-border;
+
+    @include md {
+      padding-top: $spacing-4;
+      border-top: none;
+    }
+  }
+
+  &__list-heading {
+    margin-bottom: $spacing-6;
+
+    @include md {
+      margin-bottom: $spacing-8;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-5;
+
+    @include sm { grid-template-columns: repeat(2, 1fr); }
+    @include lg { grid-template-columns: repeat(3, 1fr); }
+  }
+}

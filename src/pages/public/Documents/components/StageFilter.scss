@@ -1,0 +1,98 @@
+.stage-filter {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-4;
+  padding: $spacing-4;
+  background: $color-white;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  margin-bottom: $spacing-6;
+
+  @include sm {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: $spacing-5;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-1;
+    flex: 1;
+    min-width: 0;
+
+    @include sm {
+      flex-direction: row;
+      align-items: center;
+      gap: $spacing-3;
+    }
+  }
+
+  &__label {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    color: $color-text-muted;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  // Toggle switch
+  &__switch {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-3;
+    cursor: pointer;
+    user-select: none;
+    padding: $spacing-2 0;
+    flex-shrink: 0;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+
+      &:checked + .stage-filter__switch-track {
+        background: $color-primary;
+
+        .stage-filter__switch-thumb {
+          transform: translateX(20px);
+        }
+      }
+
+      &:focus-visible + .stage-filter__switch-track {
+        box-shadow: 0 0 0 3px rgba($color-primary, 0.2);
+      }
+    }
+  }
+
+  &__switch-track {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    background: $color-gray-300;
+    border-radius: $radius-full;
+    transition: background $transition-base;
+    flex-shrink: 0;
+  }
+
+  &__switch-thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background: $color-white;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    transition: transform $transition-base;
+  }
+
+  &__switch-label {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+    color: $color-text-primary;
+  }
+}

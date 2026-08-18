@@ -1,0 +1,37 @@
+.glass-card {
+  border-radius: $radius-lg;
+  transition: all $transition-base;
+  position: relative;
+  overflow: hidden;
+
+  &--default {
+    @include glass;
+    box-shadow: $shadow-sm;
+  }
+
+  &--strong {
+    @include glass-strong;
+    box-shadow: $shadow-md;
+  }
+
+  &--subtle {
+    background: $color-white;
+    border: 1px solid $color-border;
+    box-shadow: $shadow-xs;
+  }
+
+  &--hover {
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: $shadow-lg;
+    }
+  }
+
+  // Padding
+  &--pad-none { padding: 0; }
+  &--pad-sm   { padding: $spacing-4; }
+  &--pad-md   { padding: $spacing-6; }
+  &--pad-lg   { padding: $spacing-8; }
+}

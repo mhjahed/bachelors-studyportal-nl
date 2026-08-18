@@ -1,0 +1,85 @@
+.page-hero {
+  position: relative;
+  padding: $spacing-16 0 $spacing-12;
+  background: linear-gradient(135deg, $color-primary-dark 0%, $color-primary 60%, $color-primary-light 100%);
+  overflow: hidden;
+  color: $color-white;
+
+  &__pattern {
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba($color-accent, 0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  &__breadcrumbs {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-2;
+    margin-bottom: $spacing-5;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+  }
+
+  &__crumb {
+    color: rgba($color-white, 0.7);
+    text-decoration: none;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $color-white;
+      text-decoration: none;
+    }
+
+    &--current {
+      color: $color-white;
+      font-weight: $font-weight-semibold;
+    }
+  }
+
+  &__crumb-sep {
+    color: rgba($color-white, 0.4);
+    font-size: 1rem;
+  }
+
+  &__eyebrow {
+    margin-bottom: $spacing-5;
+  }
+
+  &__title {
+    font-size: $font-size-3xl;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-tight;
+    letter-spacing: -0.02em;
+    color: $color-white;
+    margin: 0 0 $spacing-4;
+
+    @include md {
+      font-size: $font-size-4xl;
+    }
+  }
+
+  &__subtitle {
+    font-size: $font-size-md;
+    line-height: $line-height-relaxed;
+    color: rgba($color-white, 0.85);
+    margin: 0 auto;
+    max-width: 620px;
+
+    @include md {
+      font-size: $font-size-lg;
+    }
+  }
+}

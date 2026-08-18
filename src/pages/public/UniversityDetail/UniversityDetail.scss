@@ -1,0 +1,216 @@
+.uni-detail-page {
+  background: $color-bg-secondary;
+  min-height: 100vh;
+
+  &__cover {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    min-height: 280px;
+    max-height: 440px;
+    overflow: hidden;
+    background: $color-gray-100;
+  }
+
+  &__cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__cover-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+      rgba(15, 36, 68, 0.35) 0%,
+      rgba(15, 36, 68, 0.6) 100%
+    );
+  }
+
+  &__header-container {
+    position: relative;
+    margin-top: -$spacing-16;
+    z-index: 1;
+  }
+
+  &__header {
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-xl;
+    padding: $spacing-6;
+    box-shadow: $shadow-lg;
+
+    @include md {
+      padding: $spacing-8;
+    }
+  }
+
+  &__breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: $spacing-2;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    color: $color-text-muted;
+    margin-bottom: $spacing-5;
+
+    a {
+      color: $color-text-muted;
+      text-decoration: none;
+      &:hover { color: $color-primary; }
+    }
+
+    i {
+      font-size: 1rem;
+      color: $color-text-light;
+    }
+
+    span {
+      color: $color-text-primary;
+      font-weight: $font-weight-semibold;
+    }
+  }
+
+  &__header-top {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing-5;
+    margin-bottom: $spacing-6;
+    padding-bottom: $spacing-6;
+    border-bottom: 1px solid $color-border-light;
+    flex-wrap: wrap;
+
+    @include md {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__short-mark {
+    font-size: 2.5rem;
+    font-weight: $font-weight-bold;
+    color: $color-primary;
+    letter-spacing: -0.03em;
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1;
+    padding: $spacing-3 $spacing-4;
+    border: 3px solid $color-primary;
+    border-radius: $radius-md;
+    flex-shrink: 0;
+
+    @include md {
+      font-size: 3rem;
+    }
+  }
+
+  &__header-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__badges {
+    display: flex;
+    gap: $spacing-2;
+    flex-wrap: wrap;
+    margin-bottom: $spacing-3;
+  }
+
+  &__title {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-tight;
+    color: $color-text-primary;
+    margin: 0;
+    letter-spacing: -0.02em;
+
+    @include md {
+      font-size: $font-size-3xl;
+    }
+  }
+
+  &__quick-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-4;
+
+    @include sm {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__quick-stat {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-1;
+
+    &--action {
+      justify-content: center;
+    }
+  }
+
+  &__quick-stat-value {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    color: $color-primary;
+    line-height: 1;
+
+    @include md {
+      font-size: $font-size-2xl;
+    }
+  }
+
+  &__quick-stat-label {
+    font-size: 0.7rem;
+    font-weight: $font-weight-medium;
+    color: $color-text-muted;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &__body {
+    padding: $spacing-12 0 $spacing-24;
+  }
+
+  &__sections {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-16;
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-xl;
+    padding: $spacing-8;
+    box-shadow: $shadow-sm;
+
+    @include md {
+      padding: $spacing-12;
+    }
+  }
+
+  // Not found
+  &--not-found {
+    padding: $spacing-24 0;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+  }
+
+  &__not-found {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-4;
+    align-items: center;
+
+    h1 {
+      font-size: $font-size-2xl;
+      color: $color-text-primary;
+      margin: 0;
+    }
+
+    p {
+      font-size: $font-size-md;
+      color: $color-text-secondary;
+      max-width: 480px;
+      margin: 0;
+    }
+  }
+}

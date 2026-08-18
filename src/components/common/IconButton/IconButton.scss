@@ -1,0 +1,86 @@
+.icon-btn {
+  @include button-reset;
+  @include flex-center;
+  border-radius: 50%;
+  position: relative;
+  transition: all $transition-base;
+  flex-shrink: 0;
+
+  i {
+    line-height: 1;
+  }
+
+  // Sizes
+  &--sm {
+    width: 32px;
+    height: 32px;
+    i { font-size: 1rem; }
+  }
+
+  &--md {
+    width: 40px;
+    height: 40px;
+    i { font-size: 1.25rem; }
+  }
+
+  &--lg {
+    width: 48px;
+    height: 48px;
+    i { font-size: 1.5rem; }
+  }
+
+  // Variants
+  &--default {
+    background: $color-gray-100;
+    color: $color-text-secondary;
+
+    &:hover {
+      background: $color-gray-200;
+      color: $color-text-primary;
+    }
+  }
+
+  &--primary {
+    background: $color-primary;
+    color: $color-white;
+
+    &:hover {
+      background: $color-primary-light;
+    }
+  }
+
+  &--ghost {
+    background: transparent;
+    color: $color-text-secondary;
+
+    &:hover {
+      background: $color-gray-100;
+      color: $color-text-primary;
+    }
+  }
+
+  &--glass {
+    @include glass-strong;
+    color: $color-text-primary;
+
+    &:hover {
+      background: rgba($color-white, 1);
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    background: $color-accent;
+    color: $color-white;
+    font-size: 0.65rem;
+    font-weight: $font-weight-bold;
+    border-radius: 9px;
+    @include flex-center;
+    border: 2px solid $color-white;
+  }
+}   

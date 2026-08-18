@@ -1,0 +1,135 @@
+.programs-table {
+  &__heading {
+    margin-bottom: $spacing-5;
+  }
+
+  // Desktop table
+  &__wrap {
+    display: none;
+    overflow-x: auto;
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+
+    @include md {
+      display: block;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      background: $color-bg-secondary;
+
+      th {
+        text-align: left;
+        padding: $spacing-3 $spacing-4;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-bold;
+        color: $color-text-secondary;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        border-bottom: 1px solid $color-border;
+        white-space: nowrap;
+      }
+    }
+
+    tbody {
+      td {
+        padding: $spacing-4;
+        font-size: $font-size-sm;
+        color: $color-text-primary;
+        border-bottom: 1px solid $color-border-light;
+        vertical-align: middle;
+      }
+
+      tr:last-child td {
+        border-bottom: none;
+      }
+
+      tr:hover {
+        background: $color-bg-secondary;
+      }
+    }
+  }
+
+  &__program-name {
+    font-weight: $font-weight-semibold;
+    color: $color-text-primary;
+    margin-bottom: 2px;
+  }
+
+  &__program-level {
+    font-size: $font-size-xs;
+    color: $color-text-muted;
+  }
+
+  // Mobile card view
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-4;
+
+    @include md {
+      display: none;
+    }
+  }
+}
+
+.program-card {
+  background: $color-white;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  padding: $spacing-4;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: $spacing-2;
+    margin-bottom: $spacing-4;
+    padding-bottom: $spacing-3;
+    border-bottom: 1px solid $color-border-light;
+  }
+
+  &__name {
+    font-size: $font-size-base;
+    font-weight: $font-weight-semibold;
+    color: $color-text-primary;
+    margin: 0;
+    line-height: $line-height-snug;
+    flex: 1;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-3;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    &--full {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__label {
+    font-size: 0.7rem;
+    font-weight: $font-weight-medium;
+    color: $color-text-muted;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &__value {
+    font-size: $font-size-sm;
+    color: $color-text-primary;
+    font-weight: $font-weight-semibold;
+  }
+}

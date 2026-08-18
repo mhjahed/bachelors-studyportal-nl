@@ -1,0 +1,113 @@
+.step-accordion {
+  background: $color-white;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  transition: all $transition-base;
+  overflow: hidden;
+
+  &--important {
+    border-left: 3px solid $color-accent;
+  }
+
+  &:hover:not(&--open) {
+    border-color: $color-border-dark;
+  }
+
+  &--open {
+    border-color: $color-primary-lighter;
+    box-shadow: $shadow-sm;
+
+    .step-accordion__caret {
+      transform: rotate(180deg);
+    }
+
+    .step-accordion__body {
+      grid-template-rows: 1fr;
+    }
+  }
+
+  &__header {
+    @include button-reset;
+    display: flex;
+    align-items: center;
+    gap: $spacing-4;
+    width: 100%;
+    padding: $spacing-4 $spacing-5;
+    text-align: left;
+    transition: background $transition-fast;
+
+    &:hover {
+      background: $color-gray-50;
+    }
+  }
+
+  &__number {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    color: $color-text-light;
+    font-family: $font-family-mono;
+    flex-shrink: 0;
+    letter-spacing: 0.05em;
+  }
+
+  &__title {
+    flex: 1;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+    color: $color-text-primary;
+    line-height: $line-height-snug;
+
+    @include md {
+      font-size: $font-size-base;
+    }
+  }
+
+  &__badge {
+    display: none;
+    align-items: center;
+    gap: $spacing-1;
+    padding: 3px 10px;
+    background: $color-accent-faint;
+    color: $color-accent-dark;
+    font-size: 0.7rem;
+    font-weight: $font-weight-bold;
+    border-radius: $radius-full;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+
+    i { font-size: 0.85rem; }
+
+    @include sm {
+      display: inline-flex;
+    }
+  }
+
+  &__caret {
+    font-size: 1.35rem;
+    color: $color-text-muted;
+    transition: transform $transition-base;
+    flex-shrink: 0;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows $transition-base;
+  }
+
+  &__content {
+    overflow: hidden;
+    padding: 0 $spacing-5;
+
+    p {
+      padding: 0 0 $spacing-5;
+      margin: 0;
+      font-size: $font-size-sm;
+      line-height: $line-height-relaxed;
+      color: $color-text-secondary;
+      border-top: 1px solid $color-border-light;
+      padding-top: $spacing-4;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.badge-custom {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-2;
+  font-weight: $font-weight-semibold;
+  border-radius: $radius-full;
+  line-height: 1;
+  white-space: nowrap;
+
+  i { font-size: 1em; }
+
+  // Sizes
+  &--sm {
+    padding: 4px 10px;
+    font-size: 0.7rem;
+  }
+
+  &--md {
+    padding: 6px 14px;
+    font-size: $font-size-xs;
+  }
+
+  &__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    display: inline-block;
+  }
+
+  // Variants
+  &--default {
+    background: $color-gray-100;
+    color: $color-text-secondary;
+  }
+
+  &--primary {
+    background: $color-primary-faint;
+    color: $color-primary;
+  }
+
+  &--accent {
+    background: $color-accent-faint;
+    color: $color-accent-dark;
+  }
+
+  &--success {
+    background: $color-success-light;
+    color: $color-success;
+  }
+
+  &--warning {
+    background: $color-warning-light;
+    color: $color-warning;
+  }
+
+  &--danger {
+    background: $color-danger-light;
+    color: $color-danger;
+  }
+
+  &--info {
+    background: $color-info-light;
+    color: $color-info;
+  }
+}

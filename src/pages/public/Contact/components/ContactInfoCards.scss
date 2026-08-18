@@ -1,0 +1,77 @@
+.contact-info-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-4;
+
+  @include md {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-info-card {
+  position: relative;
+  padding: $spacing-5;
+  background: $color-white;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  transition: all $transition-base;
+  overflow: hidden;
+
+  &:hover {
+    border-color: $color-primary-lighter;
+    box-shadow: $shadow-sm;
+
+    .contact-info-card__accent {
+      transform: scaleY(1);
+    }
+  }
+
+  &__accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, $color-primary 0%, $color-accent 100%);
+    transform: scaleY(0.4);
+    transform-origin: top;
+    transition: transform $transition-base;
+  }
+
+  &__label {
+    display: block;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    color: $color-text-muted;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: $spacing-2;
+  }
+
+  &__value {
+    display: block;
+    font-size: $font-size-md;
+    font-weight: $font-weight-semibold;
+    color: $color-text-primary;
+    line-height: $line-height-snug;
+    word-break: break-word;
+
+    &--link {
+      color: $color-primary;
+      text-decoration: none;
+      transition: color $transition-fast;
+
+      &:hover {
+        color: $color-primary-light;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__subtext {
+    display: block;
+    font-size: $font-size-xs;
+    color: $color-text-muted;
+    margin-top: $spacing-1;
+  }
+}

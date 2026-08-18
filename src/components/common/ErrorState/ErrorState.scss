@@ -1,0 +1,37 @@
+.error-state {
+  @include flex-center;
+  flex-direction: column;
+  gap: $spacing-3;
+  padding: $spacing-16 $spacing-6;
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto;
+
+  &__icon {
+    width: 72px;
+    height: 72px;
+    @include flex-center;
+    background: $color-danger-light;
+    border-radius: 50%;
+    margin-bottom: $spacing-2;
+
+    i {
+      font-size: 2rem;
+      color: $color-danger;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    color: $color-text-primary;
+    margin: 0;
+  }
+
+  &__description {
+    font-size: $font-size-sm;
+    color: $color-text-secondary;
+    line-height: $line-height-relaxed;
+    margin: 0 0 $spacing-3;
+  }
+}

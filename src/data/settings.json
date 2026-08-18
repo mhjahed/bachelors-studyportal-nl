@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-01T00:00:00.000Z",
+  "data": {
+    "siteName": "Bachelors Portal NL",
+    "siteTagline": "Your Complete Guide to Studying in the Netherlands",
+    "contactEmail": "admin@bachelorsportal.nl",
+    "contactPhone": "+31 000 000 000",
+    "adminPasscode": "12345678",
+    "emailjs": {
+      "account1": {
+        "publicKey": "",
+        "serviceId": "",
+        "registrationTemplate": "",
+        "contactTemplate": ""
+      },
+      "account2": {
+        "publicKey": "",
+        "serviceId": "",
+        "universityTemplate": "",
+        "indTemplate": ""
+      },
+      "account3": {
+        "publicKey": "",
+        "serviceId": "",
+        "embassyTemplate": ""
+      }
+    },
+    "maintenance": false,
+    "registrationOpen": true
+  }
+}

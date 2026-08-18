@@ -1,0 +1,126 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-01T00:00:00.000Z",
+  "data": [
+    {
+      "id": "doc-001",
+      "name": "Valid Passport",
+      "category": "Personal Documents",
+      "categorySlug": "personal-documents",
+      "required": true,
+      "description": "Your passport must be valid for at least 6 months beyond your intended stay.",
+      "stage": "University Application",
+      "notes": "Ensure you have at least 2 blank pages for visa stamps.",
+      "order": 1,
+      "status": "active"
+    },
+    {
+      "id": "doc-002",
+      "name": "Academic Transcripts",
+      "category": "Academic Documents",
+      "categorySlug": "academic-documents",
+      "required": true,
+      "description": "Official transcripts from your previous academic institution.",
+      "stage": "University Application",
+      "notes": "Must be officially translated if not in English, Dutch, French, or German.",
+      "order": 2,
+      "status": "active"
+    },
+    {
+      "id": "doc-003",
+      "name": "English Proficiency Certificate",
+      "category": "Academic Documents",
+      "categorySlug": "academic-documents",
+      "required": true,
+      "description": "IELTS, TOEFL or equivalent English language certificate.",
+      "stage": "University Application",
+      "notes": "Minimum IELTS 6.0 is required by most Dutch universities.",
+      "order": 3,
+      "status": "active"
+    },
+    {
+      "id": "doc-004",
+      "name": "Motivation Letter",
+      "category": "Academic Documents",
+      "categorySlug": "academic-documents",
+      "required": true,
+      "description": "A letter explaining your reasons for choosing this program and university.",
+      "stage": "University Application",
+      "notes": "Should be 400-600 words. Be specific about your goals.",
+      "order": 4,
+      "status": "active"
+    },
+    {
+      "id": "doc-005",
+      "name": "Passport-Size Photographs",
+      "category": "Personal Documents",
+      "categorySlug": "personal-documents",
+      "required": true,
+      "description": "Recent passport-size photographs (35mm x 45mm, white background).",
+      "stage": "Visa Application",
+      "notes": "Photos must be less than 6 months old.",
+      "order": 5,
+      "status": "active"
+    },
+    {
+      "id": "doc-006",
+      "name": "Proof of Tuition Payment",
+      "category": "Financial Documents",
+      "categorySlug": "financial-documents",
+      "required": true,
+      "description": "Bank receipt or confirmation showing tuition payment to the university.",
+      "stage": "IND Appointment",
+      "notes": "Full tuition for the first year must typically be paid before the IND appointment.",
+      "order": 6,
+      "status": "active"
+    },
+    {
+      "id": "doc-007",
+      "name": "Bank Statement — Block Money",
+      "category": "Financial Documents",
+      "categorySlug": "financial-documents",
+      "required": true,
+      "description": "Bank statement showing approximately EUR 11,400 as block money.",
+      "stage": "IND Appointment",
+      "notes": "Must be in your account for at least 28 days before the IND appointment.",
+      "order": 7,
+      "status": "active"
+    },
+    {
+      "id": "doc-008",
+      "name": "University Admission Letter",
+      "category": "University Documents",
+      "categorySlug": "university-documents",
+      "required": true,
+      "description": "Official admission offer from the Dutch university.",
+      "stage": "IND Appointment",
+      "notes": "Must be the final unconditional offer.",
+      "order": 8,
+      "status": "active"
+    },
+    {
+      "id": "doc-009",
+      "name": "Travel Insurance",
+      "category": "Other Documents",
+      "categorySlug": "other-documents",
+      "required": false,
+      "description": "Comprehensive travel/health insurance covering your stay.",
+      "stage": "Embassy Submission",
+      "notes": "Some embassies require proof of insurance for visa submission.",
+      "order": 9,
+      "status": "active"
+    },
+    {
+      "id": "doc-010",
+      "name": "Proof of Accommodation",
+      "category": "Other Documents",
+      "categorySlug": "other-documents",
+      "required": false,
+      "description": "Confirmation of accommodation arrangements in the Netherlands.",
+      "stage": "Travel Preparation",
+      "notes": "University dormitory confirmation or private rental agreement.",
+      "order": 10,
+      "status": "active"
+    }
+  ]
+}

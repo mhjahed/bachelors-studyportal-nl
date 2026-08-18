@@ -1,0 +1,117 @@
+.document-preview {
+  padding: $spacing-24 0;
+  background: $color-bg-secondary;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-8;
+    align-items: center;
+
+    @include lg {
+      grid-template-columns: 1fr 1.1fr;
+      gap: $spacing-16;
+    }
+  }
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-6;
+  }
+
+  &__stats {
+    display: flex;
+    gap: $spacing-8;
+    padding: $spacing-4 0;
+    border-top: 1px solid $color-border;
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__stat-value {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    color: $color-primary;
+    line-height: 1;
+  }
+
+  &__stat-label {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    color: $color-text-muted;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &__list {
+    background: $color-white;
+    border-radius: $radius-lg;
+    border: 1px solid $color-border;
+    box-shadow: $shadow-sm;
+    overflow: hidden;
+  }
+
+  &__list-header {
+    padding: $spacing-4 $spacing-5;
+    background: $color-primary-faint;
+    color: $color-primary;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    display: flex;
+    align-items: center;
+    gap: $spacing-2;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    i { font-size: 1.15rem; }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: $spacing-4;
+    padding: $spacing-4 $spacing-5;
+    border-bottom: 1px solid $color-border-light;
+
+    &:last-child { border-bottom: none; }
+  }
+
+  &__item-number {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    color: $color-text-light;
+    font-family: $font-family-mono;
+    flex-shrink: 0;
+  }
+
+  &__item-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+
+  &__item-title {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+    color: $color-text-primary;
+    @include text-truncate;
+  }
+
+  &__item-stage {
+    font-size: $font-size-xs;
+    color: $color-text-muted;
+  }
+}

@@ -1,0 +1,136 @@
+.featured-updates {
+  padding: $spacing-24 0;
+  background: $color-white;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: $spacing-6;
+    margin-bottom: $spacing-12;
+    flex-wrap: wrap;
+  }
+
+  &__cta-desktop {
+    display: none;
+
+    @include md {
+      display: inline-flex;
+    }
+  }
+
+  &__cta-mobile {
+    display: block;
+    margin-top: $spacing-8;
+
+    @include md {
+      display: none;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-6;
+
+    @include md {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+.update-card {
+  display: flex;
+  flex-direction: column;
+  background: $color-white;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  text-decoration: none;
+  transition: all $transition-base;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+    border-color: $color-primary-lighter;
+    text-decoration: none;
+
+    .update-card__image {
+      transform: scale(1.05);
+    }
+
+    .update-card__link {
+      color: $color-primary;
+      gap: $spacing-2;
+    }
+  }
+
+  &__image-wrap {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: $color-gray-100;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform $transition-slow;
+  }
+
+  &__badge {
+    position: absolute;
+    top: $spacing-3;
+    left: $spacing-3;
+  }
+
+  &__body {
+    padding: $spacing-5;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-3;
+    flex: 1;
+  }
+
+  &__meta {
+    display: flex;
+    gap: $spacing-2;
+    font-size: $font-size-xs;
+    color: $color-text-muted;
+    font-weight: $font-weight-medium;
+  }
+
+  &__title {
+    font-size: $font-size-md;
+    font-weight: $font-weight-bold;
+    color: $color-text-primary;
+    margin: 0;
+    line-height: $line-height-snug;
+    @include text-clamp(2);
+  }
+
+  &__subtitle {
+    font-size: $font-size-sm;
+    color: $color-text-secondary;
+    line-height: $line-height-relaxed;
+    margin: 0;
+    @include text-clamp(2);
+    flex: 1;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-1;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-semibold;
+    color: $color-text-muted;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: all $transition-fast;
+    margin-top: $spacing-2;
+
+    i { font-size: 1rem; }
+  }
+}

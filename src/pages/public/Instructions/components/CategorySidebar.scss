@@ -1,0 +1,117 @@
+.category-sidebar {
+  background: $color-white;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  box-shadow: $shadow-sm;
+
+  @include lg {
+    position: sticky;
+    top: calc(#{$navbar-height} + #{$spacing-6});
+  }
+
+  &__header {
+    padding: $spacing-4 $spacing-5;
+    background: $color-primary-faint;
+    color: $color-primary;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: flex;
+    align-items: center;
+    gap: $spacing-2;
+    border-bottom: 1px solid $color-border-light;
+
+    i { font-size: 1.15rem; }
+
+    // Hide the header on mobile — the horizontal scroll speaks for itself
+    @include max-lg {
+      display: none;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+
+    // Mobile: horizontal scroll
+    @include max-lg {
+      flex-direction: row;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: $spacing-2;
+      gap: $spacing-2;
+
+      // Hide scrollbar
+      &::-webkit-scrollbar { display: none; }
+      scrollbar-width: none;
+    }
+  }
+
+  &__item {
+    @include button-reset;
+    display: flex;
+    align-items: center;
+    gap: $spacing-3;
+    padding: $spacing-3 $spacing-5;
+    text-align: left;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    color: $color-text-secondary;
+    border-bottom: 1px solid $color-border-light;
+    transition: all $transition-fast;
+    width: 100%;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background: $color-gray-50;
+      color: $color-text-primary;
+    }
+
+    &--active {
+      background: $color-primary-faint;
+      color: $color-primary;
+      font-weight: $font-weight-semibold;
+
+      .category-sidebar__icon { color: $color-primary; }
+    }
+
+    @include max-lg {
+      flex-shrink: 0;
+      border-bottom: none;
+      border: 1.5px solid $color-border;
+      border-radius: $radius-full;
+      padding: $spacing-2 $spacing-4;
+      scroll-snap-align: start;
+      white-space: nowrap;
+
+      &--active {
+        border-color: $color-primary;
+      }
+    }
+  }
+
+  &__icon {
+    font-size: 1.25rem;
+    color: $color-text-muted;
+    flex-shrink: 0;
+    transition: color $transition-fast;
+  }
+
+  &__label {
+    flex: 1;
+  }
+
+  &__arrow {
+    font-size: 1.15rem;
+    color: $color-primary;
+
+    @include max-lg {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+.journey {
+  padding: $spacing-24 0;
+  background: $color-bg-secondary;
+
+  &__heading {
+    margin: 0 auto $spacing-16;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-4;
+
+    @include sm { grid-template-columns: repeat(2, 1fr); }
+    @include md { grid-template-columns: repeat(3, 1fr); }
+    @include lg { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-3;
+    padding: $spacing-6;
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    text-decoration: none;
+    transition: all $transition-base;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: $color-accent;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform $transition-base;
+    }
+
+    &:hover {
+      border-color: $color-primary;
+      transform: translateY(-4px);
+      box-shadow: $shadow-md;
+      text-decoration: none;
+
+      &::before { transform: scaleX(1); }
+
+      .journey__number { color: $color-primary; }
+      .journey__accent-line { width: 48px; background: $color-accent; }
+      .journey__link { color: $color-primary; gap: $spacing-2; }
+    }
+  }
+
+  &__card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $spacing-3;
+    margin-bottom: $spacing-2;
+  }
+
+  &__number {
+    font-size: 2.5rem;
+    font-weight: $font-weight-bold;
+    color: $color-text-light;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    font-family: Georgia, 'Times New Roman', serif;
+    transition: color $transition-base;
+  }
+
+  &__accent-line {
+    width: 24px;
+    height: 3px;
+    background: $color-border-dark;
+    border-radius: $radius-full;
+    transition: all $transition-base;
+  }
+
+  &__title {
+    font-size: $font-size-md;
+    font-weight: $font-weight-bold;
+    color: $color-text-primary;
+    margin: 0;
+    line-height: $line-height-snug;
+  }
+
+  &__description {
+    font-size: $font-size-sm;
+    color: $color-text-secondary;
+    line-height: $line-height-relaxed;
+    margin: 0;
+    flex: 1;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-1;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-semibold;
+    color: $color-text-muted;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: all $transition-fast;
+    margin-top: $spacing-3;
+    padding-top: $spacing-3;
+    border-top: 1px solid $color-border-light;
+
+    i { font-size: 1rem; }
+  }
+}

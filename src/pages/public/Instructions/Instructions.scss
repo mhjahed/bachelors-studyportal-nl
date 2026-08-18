@@ -1,0 +1,39 @@
+.instructions-page {
+  background: $color-bg-secondary;
+  min-height: 100vh;
+
+  &__body {
+    padding: $spacing-12 0 $spacing-24;
+  }
+
+  &__layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-6;
+
+    @include lg {
+      grid-template-columns: 280px 1fr;
+      gap: $spacing-8;
+      align-items: start;
+    }
+  }
+
+  &__sidebar {
+    // Mobile: sidebar becomes horizontal scroll strip
+    @include max-lg {
+      margin: 0 -#{$spacing-5};
+      padding: 0 $spacing-5;
+      overflow: hidden;
+    }
+  }
+
+  &__content {
+    min-width: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-6;
+  }
+}

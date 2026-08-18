@@ -1,0 +1,313 @@
+// ============================================================
+// PUBLIC NAVBAR
+// ============================================================
+
+.public-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $navbar-height;
+  z-index: $z-fixed;
+  background: $color-white;
+  border-bottom: 1px solid $color-border-light;
+  transition:
+    background $transition-base,
+    border-color $transition-base,
+    box-shadow $transition-base,
+    backdrop-filter $transition-base;
+
+  // Scrolled state — solid white + strong shadow (premium look)
+  &--scrolled {
+    background: rgba($color-white, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom-color: transparent;
+    box-shadow: 0 4px 20px rgba($color-primary-dark, 0.08);
+  }
+
+  // Transparent state (only on hero pages before scroll)
+  &--transparent {
+    background: transparent;
+    border-bottom-color: transparent;
+    box-shadow: none;
+
+    .public-navbar__link {
+      color: rgba($color-white, 0.85);
+
+      &:hover {
+        color: $color-white;
+        background: rgba($color-white, 0.12);
+      }
+
+      &--active {
+        color: $color-white;
+        background: rgba($color-white, 0.15);
+      }
+    }
+
+    .public-navbar__btn--secondary {
+      color: $color-white;
+      border-color: rgba($color-white, 0.5);
+      background: transparent;
+
+      &:hover {
+        background: rgba($color-white, 0.12);
+        border-color: $color-white;
+        color: $color-white;
+      }
+    }
+
+    .public-navbar__btn--primary {
+      background: $color-white;
+      color: $color-primary-dark;
+      border-color: $color-white;
+
+      &:hover {
+        background: $color-gray-50;
+        color: $color-primary-dark;
+        border-color: $color-gray-50;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    .public-navbar__mobile-toggle {
+      color: $color-white;
+
+      &:hover {
+        background: rgba($color-white, 0.15);
+      }
+    }
+  }
+
+  &__container {
+    max-width: $container-max-width;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 $spacing-6;
+    @include flex-between;
+    gap: $spacing-4;
+  }
+
+  // Navigation Links
+  &__nav {
+    display: none;
+    align-items: center;
+    gap: $spacing-1;
+
+    @include lg {
+      display: flex;
+    }
+  }
+
+  &__link {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    color: $color-text-secondary;
+    padding: $spacing-2 $spacing-4;
+    border-radius: $radius-full;
+    text-decoration: none;
+    transition: all $transition-fast;
+    white-space: nowrap;
+
+    &:hover {
+      color: $color-primary;
+      background: $color-primary-faint;
+      text-decoration: none;
+    }
+
+    &--active {
+      color: $color-primary;
+      background: $color-primary-faint;
+      font-weight: $font-weight-semibold;
+    }
+  }
+
+  // Action Buttons
+  &__actions {
+    display: none;
+    align-items: center;
+    gap: $spacing-3;
+
+    @include lg {
+      display: flex;
+    }
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: $spacing-2 $spacing-5;
+    border-radius: $radius-full;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+    text-decoration: none;
+    transition: all $transition-base;
+    white-space: nowrap;
+    border: 2px solid transparent;
+    cursor: pointer;
+
+    &--primary {
+      background: $color-primary;
+      color: $color-white;
+      border-color: $color-primary;
+
+      &:hover {
+        background: $color-primary-light;
+        border-color: $color-primary-light;
+        color: $color-white;
+        transform: translateY(-1px);
+        box-shadow: $shadow-primary;
+        text-decoration: none;
+      }
+    }
+
+    &--secondary {
+      background: transparent;
+      color: $color-primary;
+      border-color: $color-primary;
+
+      &:hover {
+        background: $color-primary-faint;
+        color: $color-primary;
+        text-decoration: none;
+      }
+    }
+  }
+
+  // Mobile Toggle
+  &__mobile-toggle {
+    @include button-reset;
+    width: 40px;
+    height: 40px;
+    @include flex-center;
+    border-radius: $radius-base;
+    color: $color-text-primary;
+    font-size: 1.5rem;
+    transition: all $transition-fast;
+    flex-shrink: 0;
+
+    &:hover {
+      background: $color-gray-100;
+    }
+
+    @include lg {
+      display: none;
+    }
+  }
+}
+
+// ============================================================
+// MOBILE NAV
+// ============================================================
+
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  z-index: $z-modal;
+  pointer-events: none;
+
+  &--open {
+    pointer-events: all;
+  }
+
+  &__overlay {
+    @include absolute-fill;
+    background: rgba(0, 0, 0, 0);
+    transition: background $transition-base;
+
+    .mobile-nav--open & {
+      background: rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  &__panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    max-width: 85vw;
+    background: $color-white;
+    box-shadow: $shadow-xl;
+    @include flex-column;
+    transform: translateX(100%);
+    transition: transform $transition-slow;
+
+    .mobile-nav--open & {
+      transform: translateX(0);
+    }
+  }
+
+  &__header {
+    @include flex-between;
+    padding: $spacing-4 $spacing-5;
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__close {
+    @include button-reset;
+    width: 36px;
+    height: 36px;
+    @include flex-center;
+    border-radius: $radius-base;
+    color: $color-text-secondary;
+    font-size: 1.5rem;
+    transition: background $transition-fast;
+
+    &:hover {
+      background: $color-gray-100;
+    }
+  }
+
+  &__links {
+    flex: 1;
+    overflow-y: auto;
+    padding: $spacing-4;
+    @include flex-column;
+    gap: $spacing-1;
+  }
+
+  &__link {
+    @include flex-between;
+    padding: $spacing-3 $spacing-4;
+    border-radius: $radius-base;
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+    color: $color-text-secondary;
+    text-decoration: none;
+    transition: all $transition-fast;
+
+    &:hover {
+      color: $color-primary;
+      background: $color-primary-faint;
+      text-decoration: none;
+    }
+
+    &--active {
+      color: $color-primary;
+      background: $color-primary-faint;
+      font-weight: $font-weight-semibold;
+    }
+
+    i {
+      font-size: 1rem;
+      color: $color-gray-400;
+    }
+  }
+
+  &__footer {
+    padding: $spacing-5;
+    border-top: 1px solid $color-border;
+    @include flex-column;
+    gap: $spacing-3;
+  }
+
+  &__btn {
+    width: 100%;
+    padding: $spacing-3 $spacing-4;
+    border-radius: $radius-full;
+  }
+}

@@ -1,0 +1,139 @@
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-top: -#{$navbar-height};
+  padding-top: $navbar-height;
+
+  &__background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(15, 36, 68, 0.92) 0%,
+      rgba(26, 60, 110, 0.85) 50%,
+      rgba(42, 82, 152, 0.72) 100%
+    );
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+    padding-top: $spacing-16;
+    padding-bottom: $spacing-16;
+  }
+
+  &__content {
+    max-width: 780px;
+    color: $color-white;
+    animation: hero-fade-up 0.7s ease-out;
+  }
+
+  &__badge {
+    margin-bottom: $spacing-5;
+  }
+
+  &__title {
+    font-size: 2rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: $color-white;
+    margin-bottom: $spacing-5;
+    font-weight: $font-weight-bold;
+
+    @include md {
+      font-size: 3rem;
+    }
+
+    @include lg {
+      font-size: 3.75rem;
+    }
+  }
+
+  &__title-accent {
+    display: block;
+    color: $color-accent-lighter;
+  }
+
+  &__subtitle {
+    font-size: $font-size-md;
+    line-height: $line-height-relaxed;
+    color: rgba($color-white, 0.85);
+    margin-bottom: $spacing-8;
+    max-width: 620px;
+
+    @include md {
+      font-size: $font-size-lg;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: $spacing-3;
+    flex-wrap: wrap;
+    margin-bottom: $spacing-12;
+  }
+
+  &__stats {
+    display: flex;
+    gap: $spacing-8;
+    padding-top: $spacing-8;
+    border-top: 1px solid rgba($color-white, 0.15);
+    flex-wrap: wrap;
+
+    @include md {
+      gap: $spacing-12;
+    }
+  }
+
+  &__stat {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-1;
+  }
+
+  &__stat-value {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    color: $color-white;
+    line-height: 1;
+
+    @include md {
+      font-size: $font-size-3xl;
+    }
+  }
+
+  &__stat-label {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    color: rgba($color-white, 0.65);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+}
+
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

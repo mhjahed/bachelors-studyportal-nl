@@ -1,0 +1,413 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-01T00:00:00.000Z",
+  "data": [
+    {
+      "id": "uni-001",
+      "name": "Amsterdam University of Applied Sciences",
+      "shortName": "AUAS",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdT_vmjdbC6lR-bnXvLAdkLQyr9aaoc6v8gB-wRrYwLg&s",
+      "coverImage": "https://app.thefeedfactory.nl/api/assets/639c4c035648095378337958/Amsterdam_University_of_Applied_Sciences.jpg",
+      "location": "Amsterdam",
+      "website": "https://www.hva.nl/en",
+      "type": "University of Applied Sciences",
+      "ranking": 1,
+      "established": 1993,
+      "students": 46000,
+      "description": "The Amsterdam University of Applied Sciences (AUAS) is one of the largest universities of applied sciences in the Netherlands. Located in the heart of Amsterdam, AUAS offers a wide range of bachelor programs taught in English, with strong industry connections and a diverse international student community.",
+      "highlights": [
+        "Over 46,000 students from more than 130 countries",
+        "Located across four campuses in central Amsterdam",
+        "Strong emphasis on practical, project-based learning",
+        "Extensive industry partnerships across Europe"
+      ],
+      "programs": [
+        {
+          "id": "prog-001",
+          "name": "International Business",
+          "level": "Bachelor",
+          "duration": "4 years",
+          "language": "English",
+          "ielts": "6.0",
+          "tuitionEU": 2530,
+          "tuitionNonEU": 11500
+        },
+        {
+          "id": "prog-002",
+          "name": "Communication and Multimedia Design",
+          "level": "Bachelor",
+          "duration": "4 years",
+          "language": "English",
+          "ielts": "6.0",
+          "tuitionEU": 2530,
+          "tuitionNonEU": 11500
+        },
+        {
+          "id": "prog-003",
+          "name": "Aviation Studies",
+          "level": "Bachelor",
+          "duration": "4 years",
+          "language": "English",
+          "ielts": "6.0",
+          "tuitionEU": 2530,
+          "tuitionNonEU": 12200
+        }
+      ],
+      "admissionRequirements": {
+        "general": "A secondary school diploma equivalent to Dutch VWO or HAVO level.",
+        "english": "IELTS 6.0 (with minimum 5.5 per section) or TOEFL iBT 80+.",
+        "additional": [
+          "Motivation letter (400-600 words)",
+          "Curriculum vitae",
+          "Copy of passport",
+          "Recent passport photograph"
+        ]
+      },
+      "interviewInfo": {
+        "hasInterview": true,
+        "format": "Online via Microsoft Teams",
+        "duration": "30 minutes",
+        "topics": [
+          "Motivation for choosing the program",
+          "Understanding of the field",
+          "Career goals and future plans",
+          "Previous academic experience"
+        ],
+        "tips": [
+          "Research the program curriculum in detail beforehand",
+          "Prepare specific examples from your past experience",
+          "Be ready to discuss why AUAS specifically"
+        ]
+      },
+      "relatedArticles": [],
+      "featured": true,
+      "status": "active"
+    },
+    {
+      "id": "uni-002",
+      "name": "Rotterdam University of Applied Sciences",
+      "shortName": "RUAS",
+      "logo": "https://appdatastore666.blob.core.windows.net/public/iDokj5EZ5ik5GU9qCDABWE69",
+      "coverImage": "https://www.erasmusmagazine.nl/wp-content/uploads/sites/8/2018/01/11133139/Hogeschool-Rotterdam-gesloten.jpg?image-crop-positioner-ts=1766139134",
+      "location": "Rotterdam",
+      "website": "https://www.rotterdamuas.com",
+      "type": "University of Applied Sciences",
+      "ranking": 2,
+      "established": 1988,
+      "students": 39000,
+      "description": "Rotterdam University of Applied Sciences offers innovative bachelor programs focused on business, technology and creative industries. Based in one of Europe's most dynamic port cities, RUAS emphasizes real-world project work and international collaboration.",
+      "highlights": [
+        "39,000+ students across multiple campuses",
+        "Strong focus on entrepreneurship and innovation",
+        "Located in the vibrant port city of Rotterdam",
+        "Extensive study-abroad opportunities"
+      ],
+      "programs": [
+        {
+          "id": "prog-004",
+          "name": "Business Administration",
+          "level": "Bachelor",
+          "duration": "4 years",
+          "language": "English",
+          "ielts": "6.0",
+          "tuitionEU": 2530,
+          "tuitionNonEU": 10500
+        },
+        {
+          "id": "prog-005",
+          "name": "International Business Management Studies",
+          "level": "Bachelor",
+          "duration": "4 years",
+          "language": "English",
+          "ielts": "6.0",
+          "tuitionEU": 2530,
+          "tuitionNonEU": 10500
+        }
+      ],
+      "admissionRequirements": {
+        "general": "Secondary school diploma or equivalent qualification.",
+        "english": "IELTS 6.0 minimum or TOEFL iBT 80+.",
+        "additional": [
+          "Motivation statement",
+          "Academic transcripts",
+          "Passport copy"
+        ]
+      },
+      "interviewInfo": {
+        "hasInterview": true,
+        "format": "Online via Zoom",
+        "duration": "20-30 minutes",
+        "topics": [
+          "Motivation and program understanding",
+          "Academic background",
+          "English communication skills"
+        ],
+        "tips": [
+          "Prepare to discuss your career vision",
+          "Know the program structure well"
+        ]
+      },
+      "relatedArticles": [],
+      "featured": true,
+      "status": "active"
+    },
+    {
+      "id": "uni-003",
+      "name": "The Hague University of Applied Sciences",
+      "shortName": "THUAS",
+      "logo": "https://appdatastore666.blob.core.windows.net/public/tUz6yErj5rabp6eSHdX2n2Cy",
+      "coverImage": "https://www.thuas.com/sites/hhs/files/2022-11/hoofdvestiging-den-haag.jpeg",
+      "location": "The Hague",
+      "website": "https://www.thuas.com",
+      "type": "University of Applied Sciences",
+      "ranking": 3,
+      "established": 1987,
+      "students": 26000,
+      "description": "The Hague University of Applied Sciences is known for its international outlook and diverse student body. Located in the political capital of the Netherlands, THUAS offers over 20 bachelor programs in English.",
+      "highlights": [
+        "Over 26,000 students from 140+ nationalities",
+        "20+ bachelor programs taught in English",
+        "Located in the international city of The Hague",
+        "Strong focus on international law and public administration"
+      ],
+      "programs": [
+        {
+          "id": "prog-006",
+          "name": "European Studies",
+          "level": "Bachelor",
+          "duration": "4 years",
+          "language": "English",
+          "ielts": "6.0",
+          "tuitionEU": 2530,
+          "tuitionNonEU": 9500
+        },
+        {
+          "id": "prog-007",
+          "name": "International Financial Management",
+          "level": "Bachelor",
+          "duration": "4 years",
+          "language": "English",
+          "ielts": "6.0",
+          "tuitionEU": 2530,
+          "tuitionNonEU": 9500
+        }
+      ],
+      "admissionRequirements": {
+        "general": "Secondary school diploma at HAVO/VWO level or equivalent.",
+        "english": "IELTS 6.0 or equivalent English proficiency.",
+        "additional": [
+          "Motivation letter",
+          "Academic transcripts",
+          "Passport copy"
+        ]
+      },
+      "interviewInfo": {
+        "hasInterview": true,
+        "format": "Online interview",
+        "duration": "25 minutes",
+        "topics": [
+          "Motivation for European Studies",
+          "Understanding of international relations",
+          "Communication skills"
+        ],
+        "tips": [
+          "Follow current European affairs",
+          "Prepare to speak clearly and confidently"
+        ]
+      },
+      "relatedArticles": [],
+      "featured": false,
+      "status": "active"
+    },
+    {
+      "id": "uni-004",
+      "name": "Fontys University of Applied Sciences",
+      "shortName": "Fontys",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/5/54/Logo_of_Fontys_University_of_Applied_Sciences.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "coverImage": "https://cms.espero.eu/sites/default/files/2021-08/hm_fontys_eindhoven_lr_10.jpg",
+      "location": "Eindhoven",
+      "website": "https://fontys.edu",
+      "type": "University of Applied Sciences",
+      "ranking": 4,
+      "established": 1996,
+      "students": 44000,
+      "description": "Fontys is one of the largest universities of applied sciences in the Netherlands, with multiple campuses primarily in the Eindhoven-Tilburg region. Known especially for technology, engineering and ICT programs.",
+      "highlights": [
+        "44,000+ students across 30+ campuses",
+        "Strong focus on technology and engineering",
+        "Located in the Brainport innovation region",
+        "Extensive research and industry collaborations"
+      ],
+      "programs": [
+        {
+          "id": "prog-008",
+          "name": "Information and Communication Technology",
+          "level": "Bachelor",
+          "duration": "4 years",
+          "language": "English",
+          "ielts": "6.0",
+          "tuitionEU": 2530,
+          "tuitionNonEU": 8900
+        },
+        {
+          "id": "prog-009",
+          "name": "Industrial Engineering and Management",
+          "level": "Bachelor",
+          "duration": "4 years",
+          "language": "English",
+          "ielts": "6.0",
+          "tuitionEU": 2530,
+          "tuitionNonEU": 9700
+        }
+      ],
+      "admissionRequirements": {
+        "general": "Relevant secondary school diploma.",
+        "english": "IELTS 6.0 or TOEFL iBT 80+.",
+        "additional": [
+          "Mathematics prerequisite for technical programs",
+          "Motivation letter",
+          "Academic transcripts"
+        ]
+      },
+      "interviewInfo": {
+        "hasInterview": false,
+        "format": "N/A",
+        "duration": "N/A",
+        "topics": [],
+        "tips": []
+      },
+      "relatedArticles": [],
+      "featured": false,
+      "status": "active"
+    },
+    {
+      "id": "uni-005",
+      "name": "Hanze University of Applied Sciences",
+      "shortName": "Hanze",
+      "logo": "https://www.eurashe.eu/wp-content/uploads/2026/01/hanze-logo-web.jpg",
+      "coverImage": "https://image.focuspoints.io/groningen-wacht-op-je-campagne-18.jpg?_jwt=eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJodHRwczovL3d3dy5oYW56ZS5ubC9iaW5hcmllcy9jb250ZW50L2dhbGxlcnkvaGFuemUvY2FtcGFnbmVzL2dyb25pbmdlbi13YWNodC1vcC1qZS9ncm9uaW5nZW4td2FjaHQtb3AtamUtY2FtcGFnbmUtMTguanBnP3RzPTE3NDA2NjUzOTQwODkiLCJ3aWR0aCI6OTAwLCJoZWlnaHQiOjU1MCwiZm9jdXNQb2ludFgiOi0wLjA0LCJmb2N1c1BvaW50WSI6MC4yNiwiaXNzIjoiZjIxZWNmNzhjODQzNGQ1ZGI0MWY1ZDhhM2FkMGY2ZGEiLCJhY3Rpb24iOiJ0cmFuc2Zvcm0ifQ.l2_VduEn4uyXnMPIUFa46wDEnICczy4p1AsXyNy2CnldKEACZD-7-TUbXdwnChZvwSGKVI0Lr_QOQYKpfcgP4g",
+      "location": "Groningen",
+      "website": "https://www.hanze.nl/en",
+      "type": "University of Applied Sciences",
+      "ranking": 5,
+      "established": 1798,
+      "students": 30000,
+      "description": "Hanze University of Applied Sciences is the largest and oldest university of applied sciences in the northern Netherlands. Groningen is a lively student city with a young population and rich academic culture.",
+      "highlights": [
+        "30,000+ students in a true student city",
+        "Founded in 1798 — one of the oldest institutions",
+        "Strong focus on sustainability and energy transition",
+        "Ranked among the top student cities in Europe"
+      ],
+      "programs": [
+        {
+          "id": "prog-010",
+          "name": "International Business",
+          "level": "Bachelor",
+          "duration": "4 years",
+          "language": "English",
+          "ielts": "6.0",
+          "tuitionEU": 2530,
+          "tuitionNonEU": 9200
+        },
+        {
+          "id": "prog-011",
+          "name": "Sensor Technology",
+          "level": "Bachelor",
+          "duration": "4 years",
+          "language": "English",
+          "ielts": "6.0",
+          "tuitionEU": 2530,
+          "tuitionNonEU": 9500
+        }
+      ],
+      "admissionRequirements": {
+        "general": "Secondary school diploma at HAVO/VWO level or equivalent.",
+        "english": "IELTS 6.0 minimum.",
+        "additional": [
+          "Motivation letter",
+          "Passport copy",
+          "Academic transcripts"
+        ]
+      },
+      "interviewInfo": {
+        "hasInterview": true,
+        "format": "Online interview",
+        "duration": "20 minutes",
+        "topics": [
+          "Motivation for the program",
+          "Interest in Groningen as a city",
+          "Academic goals"
+        ],
+        "tips": [
+          "Research Groningen student life",
+          "Prepare specific program questions"
+        ]
+      },
+      "relatedArticles": [],
+      "featured": false,
+      "status": "active"
+    },
+    {
+      "id": "uni-006",
+      "name": "Saxion University of Applied Sciences",
+      "shortName": "Saxion",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Saxion_University_of_Applied_Sciences_logo.svg/1280px-Saxion_University_of_Applied_Sciences_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+      "coverImage": "https://keystoneacademic-res.cloudinary.com/image/upload/element/19/199634_MedRes_SAX00172.Jpeg",
+      "location": "Enschede",
+      "website": "https://www.saxion.edu",
+      "type": "University of Applied Sciences",
+      "ranking": 6,
+      "established": 1998,
+      "students": 27000,
+      "description": "Saxion University of Applied Sciences has campuses in Enschede, Deventer and Apeldoorn. It offers a diverse selection of bachelor programs with strong emphasis on practical skills and international exchange.",
+      "highlights": [
+        "27,000+ students across three campuses",
+        "Wide range of English-taught bachelor programs",
+        "Strong industry ties in the eastern Netherlands",
+        "Affordable cost of living in host cities"
+      ],
+      "programs": [
+        {
+          "id": "prog-012",
+          "name": "International Business",
+          "level": "Bachelor",
+          "duration": "4 years",
+          "language": "English",
+          "ielts": "6.0",
+          "tuitionEU": 2530,
+          "tuitionNonEU": 8500
+        },
+        {
+          "id": "prog-013",
+          "name": "Hotel Management",
+          "level": "Bachelor",
+          "duration": "4 years",
+          "language": "English",
+          "ielts": "6.0",
+          "tuitionEU": 2530,
+          "tuitionNonEU": 8800
+        }
+      ],
+      "admissionRequirements": {
+        "general": "Relevant secondary school diploma.",
+        "english": "IELTS 6.0 or equivalent.",
+        "additional": [
+          "Motivation letter",
+          "CV",
+          "Academic transcripts"
+        ]
+      },
+      "interviewInfo": {
+        "hasInterview": false,
+        "format": "N/A",
+        "duration": "N/A",
+        "topics": [],
+        "tips": []
+      },
+      "relatedArticles": [],
+      "featured": false,
+      "status": "active"
+    }
+  ]
+}

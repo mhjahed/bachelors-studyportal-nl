@@ -1,0 +1,253 @@
+.blog-detail-page {
+  background: $color-white;
+
+  &__hero {
+    position: relative;
+    width: 100%;
+    height: 45vh;
+    min-height: 320px;
+    max-height: 520px;
+    overflow: hidden;
+    background: $color-gray-100;
+  }
+
+  &__hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(255, 255, 255, 0.4) 100%);
+  }
+
+  // Header block sits below hero, slightly overlapping via negative margin
+  &__header-container {
+    position: relative;
+    margin-top: -$spacing-16;
+    z-index: 1;
+  }
+
+  &__header {
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-xl;
+    padding: $spacing-8 $spacing-6;
+    box-shadow: $shadow-lg;
+
+    @include md {
+      padding: $spacing-12;
+    }
+  }
+
+  &__breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: $spacing-2;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    color: $color-text-muted;
+    margin-bottom: $spacing-5;
+
+    a {
+      color: $color-text-muted;
+      text-decoration: none;
+
+      &:hover { color: $color-primary; }
+    }
+
+    i {
+      font-size: 1rem;
+      color: $color-text-light;
+    }
+
+    span {
+      color: $color-text-primary;
+      font-weight: $font-weight-semibold;
+    }
+  }
+
+  &__badges {
+    display: flex;
+    gap: $spacing-2;
+    flex-wrap: wrap;
+    margin-bottom: $spacing-5;
+  }
+
+  &__title {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-tight;
+    color: $color-text-primary;
+    margin: 0 0 $spacing-4;
+    letter-spacing: -0.02em;
+
+    @include md {
+      font-size: $font-size-3xl;
+    }
+
+    @include lg {
+      font-size: $font-size-4xl;
+    }
+  }
+
+  &__subtitle {
+    font-size: $font-size-md;
+    line-height: $line-height-relaxed;
+    color: $color-text-secondary;
+    margin: 0 0 $spacing-6;
+
+    @include md {
+      font-size: $font-size-lg;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-5;
+    padding: $spacing-5 0;
+    border-top: 1px solid $color-border-light;
+    border-bottom: 1px solid $color-border-light;
+    margin-bottom: $spacing-6;
+  }
+
+  &__meta-item {
+    display: flex;
+    align-items: center;
+    gap: $spacing-2;
+    font-size: $font-size-sm;
+    color: $color-text-secondary;
+
+    i {
+      font-size: 1.15rem;
+      color: $color-primary;
+    }
+  }
+
+  // Body
+  &__body-container {
+    padding: $spacing-12 0 $spacing-16;
+  }
+
+  &__body {
+    font-size: $font-size-md;
+    line-height: 1.75;
+    color: $color-text-primary;
+
+    @include md {
+      font-size: $font-size-lg;
+      line-height: 1.8;
+    }
+  }
+
+  &__paragraph {
+    margin: 0 0 $spacing-6;
+
+    &:first-child::first-letter {
+      font-size: 3rem;
+      font-weight: $font-weight-bold;
+      color: $color-primary;
+      float: left;
+      line-height: 0.9;
+      padding: 4px $spacing-3 0 0;
+      font-family: Georgia, 'Times New Roman', serif;
+    }
+  }
+
+  &__conclusion {
+    margin-top: $spacing-10;
+    padding: $spacing-6 $spacing-8;
+    background: $color-primary-faint;
+    border-left: 4px solid $color-primary;
+    border-radius: $radius-md;
+  }
+
+  &__conclusion-title {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    color: $color-primary;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 $spacing-3;
+  }
+
+  &__conclusion p {
+    font-size: $font-size-base;
+    line-height: $line-height-relaxed;
+    color: $color-text-primary;
+    margin: 0;
+
+    @include md {
+      font-size: $font-size-md;
+    }
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-2;
+    margin-top: $spacing-10;
+    padding-top: $spacing-6;
+    border-top: 1px solid $color-border-light;
+  }
+
+  &__tag {
+    display: inline-block;
+    padding: $spacing-1 $spacing-3;
+    background: $color-gray-100;
+    color: $color-text-secondary;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    border-radius: $radius-full;
+    transition: all $transition-fast;
+
+    &:hover {
+      background: $color-primary-faint;
+      color: $color-primary;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: $spacing-4;
+    margin-top: $spacing-12;
+    padding-top: $spacing-6;
+    border-top: 1px solid $color-border-light;
+    flex-wrap: wrap;
+  }
+
+  // Not found state
+  &--not-found {
+    padding: $spacing-24 0;
+    background: $color-bg-secondary;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+  }
+
+  &__not-found {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-4;
+    align-items: center;
+
+    h1 {
+      font-size: $font-size-2xl;
+      color: $color-text-primary;
+      margin: 0;
+    }
+
+    p {
+      font-size: $font-size-md;
+      color: $color-text-secondary;
+      max-width: 480px;
+      margin: 0;
+    }
+  }
+}

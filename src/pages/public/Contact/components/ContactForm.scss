@@ -1,0 +1,75 @@
+.contact-form {
+  background: $color-white;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  padding: $spacing-6;
+  box-shadow: $shadow-sm;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-6;
+
+  @include md {
+    padding: $spacing-8;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-2;
+    padding-bottom: $spacing-5;
+    border-bottom: 1px solid $color-border-light;
+  }
+
+  &__title {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    color: $color-text-primary;
+    margin: 0;
+    letter-spacing: -0.01em;
+
+    @include md {
+      font-size: $font-size-2xl;
+    }
+  }
+
+  &__subtitle {
+    font-size: $font-size-sm;
+    color: $color-text-secondary;
+    line-height: $line-height-relaxed;
+    margin: 0;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-5;
+
+    @include sm {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: $spacing-4;
+    padding-top: $spacing-4;
+    border-top: 1px solid $color-border-light;
+    flex-wrap: wrap;
+  }
+
+  &__note {
+    display: flex;
+    align-items: center;
+    gap: $spacing-2;
+    font-size: $font-size-xs;
+    color: $color-text-muted;
+    margin: 0;
+
+    i {
+      color: $color-success;
+      font-size: 1rem;
+    }
+  }
+}

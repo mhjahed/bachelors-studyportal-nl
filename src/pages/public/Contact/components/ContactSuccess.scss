@@ -1,0 +1,129 @@
+.contact-success {
+  background: $color-white;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  padding: $spacing-12 $spacing-6;
+  box-shadow: $shadow-sm;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-4;
+
+  @include md {
+    padding: $spacing-16 $spacing-8;
+  }
+
+  &__icon-wrap {
+    position: relative;
+    width: 96px;
+    height: 96px;
+    @include flex-center;
+    margin-bottom: $spacing-2;
+  }
+
+  &__ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid rgba($color-success, 0.3);
+    animation: contact-ripple 2s ease-out infinite;
+
+    &--delay {
+      animation-delay: 1s;
+    }
+  }
+
+  &__check {
+    position: relative;
+    width: 72px;
+    height: 72px;
+    background: $color-success;
+    border-radius: 50%;
+    @include flex-center;
+    animation: contact-bounce 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 8px 24px rgba($color-success, 0.3);
+
+    i {
+      color: $color-white;
+      font-size: 2.5rem;
+      animation: contact-check-in 0.4s ease-out 0.2s both;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    color: $color-text-primary;
+    margin: 0;
+    letter-spacing: -0.02em;
+
+    @include md {
+      font-size: $font-size-3xl;
+    }
+  }
+
+  &__message {
+    font-size: $font-size-md;
+    color: $color-text-secondary;
+    line-height: $line-height-relaxed;
+    margin: 0;
+    max-width: 480px;
+  }
+
+  &__reference {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-3;
+    padding: $spacing-3 $spacing-5;
+    background: $color-primary-faint;
+    border-radius: $radius-full;
+    margin-top: $spacing-2;
+  }
+
+  &__reference-label {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    color: $color-text-muted;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  &__reference-value {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    color: $color-primary;
+    font-family: $font-family-mono;
+    letter-spacing: 0.05em;
+  }
+
+  &__actions {
+    display: flex;
+    gap: $spacing-3;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: $spacing-4;
+  }
+}
+
+@keyframes contact-bounce {
+  0% { transform: scale(0.3); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes contact-check-in {
+  from { opacity: 0; transform: scale(0.3); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes contact-ripple {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}

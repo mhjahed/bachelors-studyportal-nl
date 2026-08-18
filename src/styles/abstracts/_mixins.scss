@@ -1,0 +1,158 @@
+// RESPONSIVE MIXINS
+
+@mixin sm {
+  @media (min-width: $breakpoint-sm) { @content; }
+}
+
+@mixin md {
+  @media (min-width: $breakpoint-md) { @content; }
+}
+
+@mixin lg {
+  @media (min-width: $breakpoint-lg) { @content; }
+}
+
+@mixin xl {
+  @media (min-width: $breakpoint-xl) { @content; }
+}
+
+@mixin xxl {
+  @media (min-width: $breakpoint-xxl) { @content; }
+}
+
+@mixin max-sm {
+  @media (max-width: #{$breakpoint-sm - 1px}) { @content; }
+}
+
+@mixin max-md {
+  @media (max-width: #{$breakpoint-md - 1px}) { @content; }
+}
+
+@mixin max-lg {
+  @media (max-width: #{$breakpoint-lg - 1px}) { @content; }
+}
+
+
+// FLEX MIXINS
+
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+
+// GLASS MIXINS
+
+
+@mixin glass {
+  background: $glass-bg;
+  backdrop-filter: $glass-blur;
+  -webkit-backdrop-filter: $glass-blur;
+  border: 1px solid $glass-border;
+}
+
+@mixin glass-strong {
+  background: $glass-bg-strong;
+  backdrop-filter: $glass-blur-strong;
+  -webkit-backdrop-filter: $glass-blur-strong;
+  border: 1px solid $glass-border;
+}
+
+
+// TYPOGRAPHY MIXINS
+
+
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin text-clamp($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+// COMPONENT MIXINS
+
+
+@mixin card-base {
+  background: $color-white;
+  border-radius: $radius-lg;
+  border: 1px solid $color-border;
+  box-shadow: $shadow-sm;
+}
+
+@mixin button-reset {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  outline: none;
+}
+
+@mixin focus-ring($color: $color-primary) {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba($color, 0.2);
+}
+
+@mixin absolute-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin overlay($opacity: 0.5) {
+  @include absolute-fill;
+  background: rgba(0, 0, 0, $opacity);
+  content: '';
+}
+
+
+// GRADIENT MIXINS
+
+
+@mixin gradient-primary {
+  background: linear-gradient(135deg, $color-primary-dark 0%, $color-primary 60%, $color-primary-light 100%);
+}
+
+@mixin gradient-accent {
+  background: linear-gradient(135deg, $color-accent-dark 0%, $color-accent 100%);
+}
+
+@mixin gradient-hero {
+  background: linear-gradient(
+    160deg,
+    rgba(15, 36, 68, 0.96) 0%,
+    rgba(26, 60, 110, 0.88) 50%,
+    rgba(42, 82, 152, 0.80) 100%
+  );
+}

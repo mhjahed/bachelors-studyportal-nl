@@ -1,0 +1,215 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-01T00:00:00.000Z",
+  "data": [
+    {
+      "id": "inst-001",
+      "category": "University Admission",
+      "categorySlug": "university-admission",
+      "title": "How to Apply to Dutch Universities of Applied Sciences",
+      "introduction": "Applying to a Dutch University of Applied Sciences requires careful preparation. This guide walks you through every step of the university admission process.",
+      "icon": "bx-buildings",
+      "order": 1,
+      "steps": [
+        {
+          "id": "step-001",
+          "title": "Research Your Program",
+          "content": "Research the programs available and ensure the university is accredited by NVAO (Accreditation Organisation of the Netherlands and Flanders).",
+          "important": false
+        },
+        {
+          "id": "step-002",
+          "title": "Check Entry Requirements",
+          "content": "Each program has specific entry requirements. Check language requirements (usually IELTS 6.0+) and academic prerequisites.",
+          "important": true
+        },
+        {
+          "id": "step-003",
+          "title": "Submit Your Application",
+          "content": "Submit your application through Studielink (the Dutch national student registration system) at www.studielink.nl.",
+          "important": false
+        }
+      ],
+      "warnings": [
+        "Application deadlines vary by university — always check the official website.",
+        "Non-EU students may have earlier deadlines than EU students."
+      ],
+      "documents": [
+        "Academic transcripts",
+        "Diploma/certificate",
+        "Passport copy",
+        "English test results",
+        "Motivation letter"
+      ],
+      "image": "",
+      "relatedContent": [],
+      "status": "active"
+    },
+    {
+      "id": "inst-002",
+      "category": "University Interview",
+      "categorySlug": "university-interview",
+      "title": "Preparing for Your University Admission Interview",
+      "introduction": "Many Dutch universities conduct admission interviews to assess your motivation and suitability for the program. Here is how to prepare.",
+      "icon": "bx-conversation",
+      "order": 2,
+      "steps": [
+        {
+          "id": "step-004",
+          "title": "Research the Program Thoroughly",
+          "content": "Read the program curriculum in detail. Be ready to explain why this specific program aligns with your goals.",
+          "important": true
+        },
+        {
+          "id": "step-005",
+          "title": "Prepare Your Motivation",
+          "content": "Have a clear and honest answer to why you want to study in the Netherlands specifically.",
+          "important": false
+        }
+      ],
+      "warnings": [
+        "Do not memorize answers — interviewers prefer genuine conversation.",
+        "Check the interview format (online vs in-person) in advance."
+      ],
+      "documents": [],
+      "image": "",
+      "relatedContent": [],
+      "status": "active"
+    },
+    {
+      "id": "inst-003",
+      "category": "IND",
+      "categorySlug": "ind",
+      "title": "Your IND Appointment — What to Expect",
+      "introduction": "The IND (Immigratie en Naturalisatiedienst) is the Dutch immigration authority. Your IND appointment is required to obtain your residence permit.",
+      "icon": "bx-id-card",
+      "order": 3,
+      "steps": [
+        {
+          "id": "step-006",
+          "title": "Receive Your Appointment Letter",
+          "content": "Your university's international office will assist in scheduling your IND appointment after you have been admitted.",
+          "important": false
+        },
+        {
+          "id": "step-007",
+          "title": "Prepare Your Financial Proof",
+          "content": "You must prove you have sufficient funds — typically shown through tuition payment confirmation and block money of approximately EUR 11,400.",
+          "important": true
+        }
+      ],
+      "warnings": [
+        "Block money must be in your bank account for at least 28 days before the IND appointment.",
+        "All documents must be originals or certified copies."
+      ],
+      "documents": [
+        "Valid passport",
+        "Admission letter",
+        "Tuition payment proof",
+        "Bank statement showing block money",
+        "Passport photo"
+      ],
+      "image": "",
+      "relatedContent": [],
+      "status": "active"
+    },
+    {
+      "id": "inst-004",
+      "category": "Embassy",
+      "categorySlug": "embassy",
+      "title": "Embassy Passport Submission Process",
+      "introduction": "After your IND appointment, you will need to submit your passport to the Dutch embassy for visa processing.",
+      "icon": "bx-world",
+      "order": 4,
+      "steps": [
+        {
+          "id": "step-008",
+          "title": "Schedule Your Embassy Appointment",
+          "content": "Book your embassy appointment through the VFS Global website or directly through the Dutch embassy in your country.",
+          "important": false
+        },
+        {
+          "id": "step-009",
+          "title": "Submit Your Passport",
+          "content": "Bring your passport and all required documents to the embassy on the scheduled date.",
+          "important": true
+        }
+      ],
+      "warnings": [
+        "Processing time is typically 4-6 weeks.",
+        "Do not make travel plans until you have received your passport back."
+      ],
+      "documents": [
+        "Valid passport",
+        "Recent passport photo",
+        "Visa application form",
+        "IND approval letter",
+        "Proof of accommodation",
+        "Travel insurance"
+      ],
+      "image": "",
+      "relatedContent": [],
+      "status": "active"
+    },
+    {
+      "id": "inst-005",
+      "category": "Passport Submission",
+      "categorySlug": "passport-submission",
+      "title": "Submitting Your Passport — Step by Step",
+      "introduction": "This section covers everything you need to know before and during your passport submission appointment.",
+      "icon": "bx-book",
+      "order": 5,
+      "steps": [],
+      "warnings": [],
+      "documents": [],
+      "image": "",
+      "relatedContent": [],
+      "status": "active"
+    },
+    {
+      "id": "inst-006",
+      "category": "Passport Collection",
+      "categorySlug": "passport-collection",
+      "title": "Collecting Your Passport After Visa Processing",
+      "introduction": "Once your visa has been processed, you will be notified to collect your passport from the embassy or VFS Global center.",
+      "icon": "bx-package",
+      "order": 6,
+      "steps": [],
+      "warnings": [],
+      "documents": [],
+      "image": "",
+      "relatedContent": [],
+      "status": "active"
+    },
+    {
+      "id": "inst-007",
+      "category": "Travel Preparation",
+      "categorySlug": "travel-preparation",
+      "title": "Preparing for Your Journey to the Netherlands",
+      "introduction": "Congratulations on receiving your visa. Now it is time to prepare for your move to the Netherlands.",
+      "icon": "bx-plane-take-off",
+      "order": 7,
+      "steps": [],
+      "warnings": [],
+      "documents": [],
+      "image": "",
+      "relatedContent": [],
+      "status": "active"
+    },
+    {
+      "id": "inst-008",
+      "category": "Arrival",
+      "categorySlug": "arrival",
+      "title": "Your First Days in the Netherlands",
+      "introduction": "Arriving in the Netherlands is exciting. Here is what you need to do in your first days to get settled.",
+      "icon": "bx-home-heart",
+      "order": 8,
+      "steps": [],
+      "warnings": [],
+      "documents": [],
+      "image": "",
+      "relatedContent": [],
+      "status": "active"
+    }
+  ]
+}

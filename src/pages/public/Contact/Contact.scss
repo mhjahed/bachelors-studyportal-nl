@@ -1,0 +1,99 @@
+.contact-page {
+  background: $color-bg-secondary;
+  min-height: 100vh;
+
+  &__body {
+    padding: $spacing-10 0 $spacing-16;
+
+    @include md {
+      padding: $spacing-12 0 $spacing-24;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-6;
+
+    @include lg {
+      grid-template-columns: 380px 1fr;
+      gap: $spacing-8;
+      align-items: start;
+    }
+  }
+
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-6;
+
+    @include lg {
+      position: sticky;
+      top: calc(#{$navbar-height} + #{$spacing-6});
+    }
+  }
+
+  &__aside-header {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-2;
+  }
+
+  &__aside-title {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    color: $color-text-primary;
+    margin: 0;
+    letter-spacing: -0.02em;
+
+    @include md {
+      font-size: $font-size-2xl;
+    }
+  }
+
+  &__aside-subtitle {
+    font-size: $font-size-sm;
+    color: $color-text-secondary;
+    line-height: $line-height-relaxed;
+    margin: 0;
+  }
+
+  &__aside-note {
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing-3;
+    padding: $spacing-4;
+    background: $color-accent-faint;
+    border-radius: $radius-md;
+    border-left: 3px solid $color-accent;
+
+    i {
+      color: $color-accent;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    strong {
+      display: block;
+      font-size: $font-size-sm;
+      color: $color-text-primary;
+      margin-bottom: 2px;
+    }
+
+    p {
+      font-size: $font-size-xs;
+      color: $color-text-secondary;
+      line-height: $line-height-relaxed;
+      margin: 0;
+    }
+  }
+
+  &__form-wrap {
+    min-width: 0;
+  }
+
+  &__success-wrap {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+}

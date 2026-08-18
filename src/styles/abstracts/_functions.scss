@@ -1,0 +1,9 @@
+// Pure functions — no imports needed
+
+@function rem($px) {
+  @return #{$px / 16}rem;
+}
+
+@function rgba-color($color, $opacity) {
+  @return rgba($color, $opacity);
+}

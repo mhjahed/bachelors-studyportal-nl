@@ -1,0 +1,79 @@
+.documents-page {
+  background: $color-bg-secondary;
+  min-height: 100vh;
+
+  &__body {
+    padding: $spacing-10 0 $spacing-16;
+
+    @include md {
+      padding: $spacing-12 0 $spacing-24;
+    }
+  }
+
+  &__progress-wrap {
+    margin-bottom: $spacing-8;
+  }
+
+  &__filters-wrap {
+    margin-bottom: $spacing-4;
+  }
+
+  &__groups {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-8;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-4;
+  }
+
+  &__group-header {
+    display: flex;
+    align-items: center;
+    gap: $spacing-3;
+  }
+
+  &__group-line {
+    width: 24px;
+    height: 3px;
+    background: $color-accent;
+    border-radius: $radius-full;
+    flex-shrink: 0;
+  }
+
+  &__group-title {
+    font-size: $font-size-md;
+    font-weight: $font-weight-bold;
+    color: $color-text-primary;
+    margin: 0;
+    letter-spacing: -0.01em;
+    flex: 1;
+    min-width: 0;
+
+    @include md {
+      font-size: $font-size-lg;
+    }
+  }
+
+  &__group-count {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-full;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    color: $color-text-secondary;
+    font-family: $font-family-mono;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-3;
+  }
+}

@@ -1,0 +1,38 @@
+// ============================================================
+// ABSTRACTS
+// Already injected into component files via vite.config.js
+// Must also be imported here for main.scss global styles
+// ============================================================
+
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/functions';
+
+// ============================================================
+// BOOTSTRAP
+// ============================================================
+
+@import 'bootstrap/scss/bootstrap';
+
+// ============================================================
+// BASE
+// ============================================================
+
+@import 'base/reset';
+@import 'base/typography';
+
+// ============================================================
+// GLOBAL LAYOUT
+// ============================================================
+
+.container {
+  max-width: $container-max-width;
+  padding-left: $spacing-6;
+  padding-right: $spacing-6;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
