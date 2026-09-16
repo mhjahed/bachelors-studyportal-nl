@@ -17,5 +17,3 @@ cp .env.example .env
 # Fill in your EmailJS credentials in .env
 npm run dev
 
-snt.ghor081@gmail.com
-great bro but I need you to continue with your own phase 5 from start please 
